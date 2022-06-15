@@ -4,12 +4,22 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <link rel="stylesheet" href="./style.css" />
     <title>Ex2</title>
   </head>
   <body>
     <div class="ex2">
+      <div class="open__Narbar" onclick="openNarbar()">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+      </div>
       <div class="narbarLeft">
+        <div class="close__Narbar" onclick="closeNarbar()">
+          <i class="fa fa-times" aria-hidden="true"></i>
+        </div>
         <ul class="narbar">
           <li class="link active">Home</li>
           <li class="link">Services</li>
@@ -98,4 +108,16 @@
       </div>
     </div>
   </body>
+  <script>
+    function openNarbar() {
+      document.querySelector(".narbarLeft").classList.add("open");
+      document.querySelector(".close__Narbar").classList.add("on");
+      document.querySelector(".container").classList.add("open");
+    }
+    function closeNarbar() {
+      document.querySelector(".narbarLeft").classList.remove("open");
+      document.querySelector(".narbarLeft").classList.remove("open");
+      document.querySelector(".container").classList.remove("open");
+    }
+  </script>
 </html>
